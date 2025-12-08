@@ -1,0 +1,39 @@
+.card_P1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* centra horizontal */
+    align-items: center;
+    /* centra vertical */
+    text-align: center;
+    /* garantia extra */
+
+    margin: 30px 60px;
+}
+
+.cardP {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centra horizontal */
+    align-items: left;
+    /* centra vertical */
+    text-align: center;
+    /* garantia extra */
+    font-size: 15px;
+
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+    margin: 15px;
+    padding: 30px 40px;
+    width: 70%;
+    min-height: 100px;
+}
+
+h2.card_title{
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,75 @@
+.card_container {
+    /*display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);*/
+    
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    margin: 0 60px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centra horizontal */
+    align-items: center;
+    /* centra vertical */
+    text-align: center;
+    /* garantia extra */
+    font-size: 15px;
+
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+    margin: 15px;
+    padding: 20px;
+    width: auto;
+    max-width: max-content;
+    min-height: 100px;
+}
+
+
+h2.title{
+    font-size: large;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    justify-content: center;
+    /* centra horizontal */
+    align-items: center;
+    /* centra vertical */
+    text-align: center;
+    /* garantia extra */
+}
+
+h2.card_title{
+    font-size: 18px;
+}
+
+b{
+    font-weight: 700;
+}
+
+h4{
+    margin-top: 15px;
+    font-weight: 700;
+    color: #40534C;
+}
+
+.comecar{
+    justify-content: center;
+    /* centra horizontal */
+    align-items: center;
+    /* centra vertical */
+    text-align: center;
+    /* garantia extra */
+
+    margin-top: 50px;
+}
+
+.comecar p{
+    margin-bottom: 15px;
+}
