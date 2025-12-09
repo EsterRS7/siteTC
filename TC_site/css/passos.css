@@ -2,38 +2,232 @@
     display: flex;
     position: relative;
     justify-content: center;
-    /* centra horizontal */
     align-items: center;
-    /* centra vertical */
     text-align: center;
-    /* garantia extra */
-
     margin: 30px 60px;
+    /* Garante espaço para o dropdown */
+    min-height: 400px;
 }
-
+ 
 .cardP {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* centra horizontal */
     align-items: left;
-    /* centra vertical */
     text-align: center;
-    /* garantia extra */
     font-size: 15px;
-
     border: none;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-    margin: 15px;
+    margin: 10px;
     padding: 30px 40px;
     width: 70%;
     min-height: 100px;
 }
 
-h2.card_title{
+h2.card_title {
     font-size: 18px;
     text-align: left;
     margin-bottom: 30px;
+}
+
+/* ESTILOS PARA OS RADIO BUTTONS */
+.escala-container {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.escala-label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.escala-label b {
+    color: #D6BD98;
+    font-weight: 700;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    gap: 50px;
+}
+
+.radio-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-option input[type="radio"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #677D6A;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.radio-option input[type="radio"]:hover {
+    border-color: #40534C;
+    box-shadow: 0 0 8px rgba(103, 125, 106, 0.3);
+}
+
+.radio-option input[type="radio"]:checked {
+    border-color: #677D6A;
+    background-color: #677D6A;
+}
+
+.radio-option input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.radio-option label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* ESTILOS PARA OS SELECTS DO PASSO 2 */
+.select-container {
+    text-align: left;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.select-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.select-label span {
+    color: #D6BD98;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    font-family: "Instrument Sans", sans-serif;
+    border: 1.5px solid #677D6A;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23677D6A' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+    /* Garante que o select fique posicionado corretamente */
+    position: relative;
+    z-index: 1;
+}
+
+.custom-select:hover {
+    border-color: #40534C;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-select:focus {
+    border-color: #40534C;
+    box-shadow: 0 0 0 3px rgba(103, 125, 106, 0.1);
+}
+
+
+.custom-select option {
+    padding: 10px;
+    font-family: "Courier New", monospace;
+    background-color: white;
+    color: #333;
+}
+
+/* CAMPO PERSONALIZADO PARA "OUTRO" */
+.input-outro {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    font-family: "Instrument Sans", sans-serif;
+    border: 1.5px solid #677D6A;
+    border-radius: 8px;
+    background-color: white;
+    outline: none;
+    margin-top: 10px;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.input-outro:focus {
+    border-color: #40534C;
+    box-shadow: 0 0 0 3px rgba(103, 125, 106, 0.1);
+}
+
+.input-outro.show {
+    display: block;
+}
+
+.erro-mensagem {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+}
+
+.erro-mensagem.show {
+    display: block;
+}
+
+
+body {
+    overflow-y: auto;
+    min-height: 100vh;
+}
+
+
+.btn {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+
+@media(max-width: 750px) {
+    .radio-group {
+        gap: 10px;
+    }
+    
+    .radio-option input[type="radio"] {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .radio-option label {
+        font-size: 12px;
+    }
+    
+    .cardP {
+        width: 85%;
+        padding: 20px 25px 40px 25px;
+    }
+    
+    .card_P1 {
+        margin: 20px 30px;
+    }
 }

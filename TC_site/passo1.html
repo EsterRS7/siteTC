@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
-    <title>Como funciona?</title>
+    <title>Passo 1</title>
     <link rel="shortcut icon" type="imagex/png" href="assets/logo.ico">
 
     <!--LINKS DAS FONTES-->
@@ -22,7 +22,6 @@
     <link rel="stylesheet" type="text/css" href="css/global.css">
     <link rel="stylesheet" type="text/css" href="css/cf.css">
     <link rel="stylesheet" type="text/css" href="css/passos.css">
-    <link>
 </head>
 
 <body>
@@ -31,7 +30,7 @@
         <nav class="topo">
             <a href="index.html">
                 <div class="container_logo">
-                    <img class="logo_image" src="assets/logo.png"></img>
+                    <img class="logo_image" src="assets/logo.png" alt="Logo">
                     <h1 class="logo_nameA">TUDO</h1>
                     <h1 class="logo_nameB">x</h1>
                     <h1 class="logo_nameC">NADA</h1>
@@ -39,48 +38,111 @@
             </a>
 
             <div class="container_menu">
-                <button class="menu_hamburguer">
-                    <ul class="menu_itens">
-                        <li>Como funciona?</li>
-                        <li>Calcular minha chance</li>
-                        <li>Sobre nós</li>
-                    </ul>
-                    <img class="menuImg" src="assets/menu.png"></img>
+                <button class="menu_hamburguer" aria-label="Menu">
+                    <img class="menuImg" src="assets/menu.png" alt="Menu">
                 </button>
             </div>
         </nav>
 
+        <!-- MENU LATERAL -->
+        <div class="menu_lateral">
+            <ul class="menu_itens">
+                <li><a href="comoFunciona.html">COMO FUNCIONA?</a></li>
+                <li><a href="sobreNos.html">SOBRE NÓS</a></li>
+            </ul>
+        </div>
 
-        <!-- Site -->
+        <!-- OVERLAY PARA FECHAR O MENU -->
+        <div class="menu_overlay"></div>
+        <!-- FORMULÁRIO PASSO 1 -->
         <div class="card_P1">
             <div class="cardP">
-                <h2 class="card_title">Passo 1 – Sobre você: escolha intuitivamente a nota que 
-                    representa sua capacidade de persistência (resiliência) e de aprendizado 
+                <h2 class="card_title">
+                    Passo 1 – Sobre você: escolha intuitivamente a nota que
+                    representa sua capacidade de persistência (resiliência) e de aprendizado
                     (inteligência)
-                </h2> 
-                <p style="text-align: left;">
-                    Selecione na escala abaixo o nível da sua <b>resiliência</b>:
-                    <br><br><br><br><br><br>
-                </p>
-                <p style="text-align: left;">
-                    Selecione na escala abaixo o nível da sua <b>inteligência</b>:
-                </p>
+                </h2>
+
+                <form id="formPasso1">
+                    <!-- ESCALA DE RESILIÊNCIA -->
+                    <div class="escala-container">
+                        <p class="escala-label">
+                            Selecione na escala abaixo o nível da sua <b>resiliência</b>:
+                        </p>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="resiliencia30" name="resiliencia" value="30" required>
+                                <label for="resiliencia30">30</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="resiliencia60" name="resiliencia" value="60">
+                                <label for="resiliencia60">60</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="resiliencia90" name="resiliencia" value="90">
+                                <label for="resiliencia90">90</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="resiliencia120" name="resiliencia" value="120">
+                                <label for="resiliencia120">120</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="resiliencia150" name="resiliencia" value="150">
+                                <label for="resiliencia150">150</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ESCALA DE INTELIGÊNCIA -->
+                    <div class="escala-container">
+                        <p class="escala-label">
+                            Selecione na escala abaixo o nível da sua <b>inteligência</b>:
+                        </p>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="inteligencia30" name="inteligencia" value="30" required>
+                                <label for="inteligencia30">30</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="inteligencia60" name="inteligencia" value="60">
+                                <label for="inteligencia60">60</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="inteligencia90" name="inteligencia" value="90">
+                                <label for="inteligencia90">90</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="inteligencia120" name="inteligencia" value="120">
+                                <label for="inteligencia120">120</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="inteligencia150" name="inteligencia" value="150">
+                                <label for="inteligencia150">150</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
-        
-        <a class="btn" href="passo1.html"><button class="btn_iniciar"> Próximo passo </button></a>
+
+        <a class="btn" href="passo2.html">
+            <button class="btn_iniciar" type="button">Próximo passo</button>
+        </a>
 
 
 
-        
-        <footer>
-            <hr>
-            <p class="final">
-                Todos os direitos reservados.<br>
-                São Paulo, 2025.
-            </p>
-        </footer>
+
+
     </div>
+    <footer>
+        <hr>
+        <p class="final">
+            Todos os direitos reservados.<br>
+            São Paulo, 2025.
+        </p>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

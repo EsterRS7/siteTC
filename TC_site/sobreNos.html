@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sobre nós</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/logo.ico">
+
+    <!--LINKS DAS FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!--LINK CSS-->
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+
+    <style>
+        .sobre-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 40px;
+        }
+
+        .sobre-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .sobre-texto {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .sobre-texto span {
+            color: #D6BD98;
+            font-weight: 600;
+        }
+
+        .desenvolvedores {
+            margin-top: 50px;
+        }
+
+        .desenvolvedores h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dev-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .dev-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dev-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .dev-foto {
+            width: 120px;
+            height: 115px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: #677D6A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+        }
+
+        .dev-nome {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1A3636;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="topo">
+            <a href="index.html">
+                <div class="container_logo">
+                    <img class="logo_image" src="assets/logo.png" alt="Logo">
+                    <h1 class="logo_nameA">TUDO</h1>
+                    <h1 class="logo_nameB">x</h1>
+                    <h1 class="logo_nameC">NADA</h1>
+                </div>
+            </a>
+
+            <div class="container_menu">
+                <button class="menu_hamburguer" aria-label="Menu">
+                    <img class="menuImg" src="assets/menu.png" alt="Menu">
+                </button>
+            </div>
+        </nav>
+
+        <!-- MENU LATERAL -->
+        <div class="menu_lateral">
+            <ul class="menu_itens">
+                <li><a href="comoFunciona.html">COMO FUNCIONA?</a></li>
+                <li><a href="sobreNos.html">SOBRE NÓS</a></li>
+            </ul>
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="menu_overlay"></div>
+
+        <!-- CONTEÚDO SOBRE NÓS -->
+        <div class="sobre-container">
+            <h2>Sobre nós</h2>
+
+            <div class="desenvolvedores">
+                <h3>Desenvolvedores</h3>
+                <p class="sobre-texto">
+                    Somos três alunos da ETEC Zona Leste. Estamos no 3° ano em
+                    Desenvolvimento de Sistemas AMS e criamos esse site
+                    como trabalho escolar para o 4° bimestre de 2025.
+                    <br>
+                    O método e a lógica do TC foram criados pelo professor <span>Marlon Marques</span>.
+                </p>
+
+                <div class="dev-grid">
+                    <div class="dev-card">
+                        <img class="dev-foto" src="assets/FotoEster.jpg">
+                        <p class="dev-nome">Ester Rodrigues Soares</p>
+                    </div>
+
+                    <div class="dev-card">
+                        <img class="dev-foto" src="assets/FotoGu.jpg">
+                        <p class="dev-nome">Gustavo Henrique Ribeiro da Silva</p>
+                    </div>
+
+                    <div class="dev-card">
+                        <img class="dev-foto" src="assets/FotoJhow.jpg">
+                        <p class="dev-nome">Jhonata Alves do Nascimento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <footer>
+        <hr>
+        <p class="final">
+            Todos os direitos reservados.<br>
+            São Paulo, 2025.
+        </p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

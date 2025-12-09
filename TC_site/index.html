@@ -1,78 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Home</title>
-        <link rel="shortcut icon" type="imagex/png" href="assets/logo.ico">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/logo.ico">
 
-        <!--LINKS DAS FONTES-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-            rel="stylesheet">
+    <!--LINKS DAS FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
-            rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
 
-        <!--LINK CSS-->
-        <link rel="stylesheet" type="text/css" href="css/global.css">
-        <link>
-    </head>
+    <!--LINK CSS-->
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+</head>
 
-    <body>
-        <div class="container">
+<body>
+    <div class="container">
 
-            <nav class="topo">
-                <a href="index.html">
-                    <div class="container_logo">
-                        <img class="logo_image" src="assets/logo.png"></img>
-                        <h1 class="logo_nameA">TUDO</h1>
-                        <h1 class="logo_nameB">x</h1>
-                        <h1 class="logo_nameC">NADA</h1>
-                    </div>
-                </a>
-
-                <div class="container_menu">
-                    <button class="menu_hamburguer">
-                        <ul class="menu_itens">
-                            <li>Como funciona?</li>
-                            <li>Calcular minha chance</li>
-                            <li>Sobre nós</li>
-                        </ul>
-                        <img class="menuImg" src="assets/menu.png"></img>
-                    </button>
+        <nav class="topo">
+            <a href="index.html">
+                <div class="container_logo">
+                    <img class="logo_image" src="assets/logo.png" alt="Logo">
+                    <h1 class="logo_nameA">TUDO</h1>
+                    <h1 class="logo_nameB">x</h1>
+                    <h1 class="logo_nameC">NADA</h1>
                 </div>
-            </nav>
+            </a>
 
-            <div class="corpo">
-                <p class="texto">
-                    Descubra <b>o quão perto você está do seu objetivo</b> de entrar no curso e instituição que deseja com o
-                    TC.
-                </p>
-
-                <a class="btn" href="comoFunciona.html"><button class="btn_iniciar"> Como isso funciona? </button></a>
-
-                <div class="textoOBS">
-                    <p>
-                        Obs: O TC não é ciência. É só uma noção para te ajudar a entender o seu momento e planejar seus
-                        estudos.
-                    </p>
-                </div>
+            <div class="container_menu">
+                <button class="menu_hamburguer" aria-label="Menu">
+                    <img class="menuImg" src="assets/menu.png" alt="Menu">
+                </button>
             </div>
+        </nav>
 
-            <footer>
-                <hr>
-                <p class="final">
-                    Todos os direitos reservados.<br>
-                    São Paulo, 2025.
-                </p>
-            </footer>
-
+        <!-- MENU LATERAL -->
+        <div class="menu_lateral">
+            <ul class="menu_itens">
+                <li><a href="comoFunciona.html">COMO FUNCIONA?</a></li>
+                <li><a href="sobreNos.html">SOBRE NÓS</a></li>
+            </ul>
         </div>
-    </body>
+
+        <!-- OVERLAY PARA FECHAR O MENU -->
+        <div class="menu_overlay"></div>
+
+        <div class="corpo">
+            <p class="texto">
+                Descubra <b>o quão perto você está do seu objetivo</b> de entrar no curso e instituição que deseja com o
+                TC.
+            </p>
+
+            <a class="btn" href="comoFunciona.html"><button class="btn_iniciar"> Como isso funciona? </button></a>
+
+            <div class="textoOBS">
+                <p>
+                    Obs: O TC não é ciência. É só uma noção para te ajudar a entender o seu momento e planejar seus
+                    estudos.
+                </p>
+            </div>
+        </div>
+
+        
+    </div>
+    <footer>
+            <hr>
+            <p class="final">
+                Todos os direitos reservados.<br>
+                São Paulo, 2025.
+            </p>
+        </footer>
+
+
+    <!-- SCRIPT JAVASCRIPT - ISSO É ESSENCIAL! -->
+    <script src="js/index.js"></script>
+</body>
 
 </html>

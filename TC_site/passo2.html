@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Passo 2</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/logo.ico">
+
+    <!--LINKS DAS FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!--LINK CSS-->
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/cf.css">
+    <link rel="stylesheet" type="text/css" href="css/passos.css">
+
+    <style>
+        /* Estilo específico para os selects com espaçamento */
+        .custom-select option {
+            font-family: "Courier New", monospace;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="topo">
+            <a href="index.html">
+                <div class="container_logo">
+                    <img class="logo_image" src="assets/logo.png" alt="Logo">
+                    <h1 class="logo_nameA">TUDO</h1>
+                    <h1 class="logo_nameB">x</h1>
+                    <h1 class="logo_nameC">NADA</h1>
+                </div>
+            </a>
+
+            <div class="container_menu">
+                <button class="menu_hamburguer" aria-label="Menu">
+                    <img class="menuImg" src="assets/menu.png" alt="Menu">
+                </button>
+            </div>
+        </nav>
+
+        <!-- MENU LATERAL -->
+        <div class="menu_lateral">
+            <ul class="menu_itens">
+                <li><a href="comoFunciona.html">COMO FUNCIONA?</a></li>
+                <li><a href="sobreNos.html">SOBRE NÓS</a></li>
+            </ul>
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="menu_overlay"></div>
+
+
+        <!-- FORMULÁRIO PASSO 2 -->
+        <div class="card_P1">
+            <div class="cardP">
+                <h2 class="card_title">
+                    Passo 2 – Seu objetivo
+                </h2>
+
+                <form id="formPasso2">
+                    <!-- SELECT DE CURSO -->
+                    <div class="select-container">
+                        <label class="select-label">
+                            Escolha um <span>curso</span> na lista abaixo:
+                        </label>
+                        <select class="custom-select" id="curso" name="curso" required>
+                            <option>Cursos</option>
+                            <option value="20">Licenciaturas em Geral ........................... 20</option>
+                            <option value="40">Letras .......................................... 40</option>
+                            <option value="40">Pedagogia ....................................... 40</option>
+                            <option value="40">História ........................................ 40</option>
+                            <option value="40">Geografia ....................................... 40</option>
+                            <option value="40">ED. FÍSICA ...................................... 40</option>
+                            <option value="60">Matemática ...................................... 60</option>
+                            <option value="60">Física .......................................... 60</option>
+                            <option value="60">Química ......................................... 60</option>
+                            <option value="60">Biologia ........................................ 60</option>
+                            <option value="60">Ciências Sociais ................................ 60</option>
+                            <option value="60">Logística ....................................... 60</option>
+                            <option value="80">Áudio Visual .................................... 80</option>
+                            <option value="80">Rádio & TV ...................................... 80</option>
+                            <option value="80">COMEX ........................................... 80</option>
+                            <option value="100">Publicidade ..................................... 100</option>
+                            <option value="100">Administração ................................... 100</option>
+                            <option value="100">Design .......................................... 100</option>
+                            <option value="100">Marketing ....................................... 100</option>
+                            <option value="100">Gestão .......................................... 100</option>
+                            <option value="120">Economia ........................................ 120</option>
+                            <option value="120">Contábeis ....................................... 120</option>
+                            <option value="140">Farmácia ........................................ 140</option>
+                            <option value="140">Fisioterapia .................................... 140</option>
+                            <option value="140">Jornalismo ...................................... 140</option>
+                            <option value="140">Computação ...................................... 140</option>
+                            <option value="140">TI .............................................. 140</option>
+                            <option value="140">Análise e Desenvolvimento de Sistemas ........... 140</option>
+                            <option value="160">Psicologia ...................................... 160</option>
+                            <option value="160">Relações Internacionais ......................... 160</option>
+                            <option value="160">Direito ......................................... 160</option>
+                            <option value="160">Arquitetura ..................................... 160</option>
+                            <option value="180">Biomedicina ..................................... 180</option>
+                            <option value="180">Veterinária ..................................... 180</option>
+                            <option value="180">Engenharias ..................................... 180</option>
+                            <option value="180">Odontologia ..................................... 180</option>
+                            <option value="200">Medicina ........................................ 200</option>
+                            <option value="outro">Outro ........................................... 100</option>
+                        </select>
+                        <input type="text" class="input-outro" id="cursoOutro" placeholder="Digite o nome do curso">
+                        <p class="erro-mensagem" id="erroCurso">Este curso já existe na lista! Selecione-o acima.</p>
+                    </div>
+
+                    <!-- SELECT DE INSTITUIÇÃO -->
+                    <div class="select-container">
+                        <label class="select-label">
+                            Escolha uma <span>instituição</span> na lista abaixo:
+                        </label>
+                        <select class="custom-select" id="instituicao" name="instituicao" required>
+                            <option>Instiruições</option>
+                            <option value="20">Instituições privadas pouco renomadas c/ bolsa de 50% ........ 20
+                            </option>
+                            <option value="40">Instituições privadas pouco renomadas c/ bolsa de 100% ....... 40
+                            </option>
+                            <option value="60">Instituições privadas médio renomadas c/ bolsa de 50% ........ 60
+                            </option>
+                            <option value="80">Instituições privadas médio renomadas c/ bolsa de 100% ....... 80
+                            </option>
+                            <option value="100">FATEC ........................................................ 100
+                            </option>
+                            <option value="100">Instituto Federal-SP ......................................... 100
+                            </option>
+                            <option value="100">UFABC ........................................................ 100
+                            </option>
+                            <option value="100">Demais institutos federais ................................... 100
+                            </option>
+                            <option value="120">PUC e Mackenzie 50% .......................................... 120
+                            </option>
+                            <option value="120">FGV .......................................................... 120
+                            </option>
+                            <option value="120">Demais instituições privadas renomadas (FAAP/Belas Artes...) . 120
+                            </option>
+                            <option value="120">Demais universidade estaduais ................................ 120
+                            </option>
+                            <option value="140">UNIFESP ...................................................... 140
+                            </option>
+                            <option value="140">UNESP ........................................................ 140
+                            </option>
+                            <option value="140">UNB .......................................................... 140
+                            </option>
+                            <option value="140">UERJ ......................................................... 140
+                            </option>
+                            <option value="140">Demais federais .............................................. 140
+                            </option>
+                            <option value="140">PUC e Mackenzie 100% ......................................... 140
+                            </option>
+                            <option value="160">UFMG ......................................................... 160
+                            </option>
+                            <option value="160">UFRGS ........................................................ 160
+                            </option>
+                            <option value="160">FEDERAL de Sergipe, PE, RJ ................................... 160
+                            </option>
+                            <option value="180">Unicamp ...................................................... 180
+                            </option>
+                            <option value="180">ITA .......................................................... 180
+                            </option>
+                            <option value="180">IME .......................................................... 180
+                            </option>
+                            <option value="200">USP .......................................................... 200
+                            </option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <a class="btn" href="resultado.html">
+            <button class="btn_iniciar" type="button" id="btnProximoPasso">Próximo passo</button>
+        </a>
+
+
+
+
+
+    </div>
+    <footer>
+        <hr>
+        <p class="final">
+            Todos os direitos reservados.<br>
+            São Paulo, 2025.
+        </p>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

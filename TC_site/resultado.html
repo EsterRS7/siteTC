@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Resultados - Tudo x Nada</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/logo.ico">
+
+    <!--LINKS DAS FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!--LINK CSS-->
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resultado-container {
+            max-width: 1100px;
+            margin: 50px auto 30px;
+            padding: 0 40px;
+            flex: 1;
+        }
+
+        .resultado-container h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 28px;
+            color: #1A3636;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+
+        .card-resultado {
+            background: white;
+            border-radius: 15px;
+            padding: 35px 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-resultado h3 {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #1A3636;
+            font-weight: 600;
+        }
+
+        .info-line {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .info-line .label {
+            color: #D6BD98;
+            font-weight: 500;
+        }
+
+        .info-line .valor {
+            font-weight: 600;
+            color: #1A3636;
+        }
+
+        .calculo-line {
+            margin-top: auto;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .card-final {
+            grid-column: 1 / -1;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .card-final h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #1A3636;
+            font-weight: 600;
+        }
+
+        .card-final p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* Responsividade */
+        @media(max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .resultado-container {
+                padding: 0 20px;
+                margin: 30px auto;
+            }
+
+            .card-resultado,
+            .card-final {
+                padding: 25px 20px;
+            }
+        }
+
+        b {
+            color: #D6BD98;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="resultadoPage">
+
+        <nav class="topo">
+            <a href="index.html">
+                <div class="container_logo">
+                    <img class="logo_image" src="assets/logo.png" alt="Logo">
+                    <h1 class="logo_nameA">TUDO</h1>
+                    <h1 class="logo_nameB">x</h1>
+                    <h1 class="logo_nameC">NADA</h1>
+                </div>
+            </a>
+
+            <div class="container_menu">
+                <button class="menu_hamburguer" aria-label="Menu">
+                    <img class="menuImg" src="assets/menu.png" alt="Menu">
+                </button>
+            </div>
+        </nav>
+
+        <!-- MENU LATERAL -->
+        <div class="menu_lateral">
+            <ul class="menu_itens">
+                <li><a href="comoFunciona.html">COMO FUNCIONA?</a></li>
+                <li><a href="sobreNos.html">SOBRE NÓS</a></li>
+            </ul>
+        </div>
+
+        <!-- OVERLAY -->
+        <div class="menu_overlay"></div>
+
+        <!-- RESULTADOS -->
+        <div class="resultado-container">
+            <h2>Resultados</h2>
+
+            <div class="cards-grid">
+                <!-- CARD PASSO 1 -->
+                <div class="card-resultado">
+                    <h3>Passo 1 - Sobre você</h3>
+
+                    <p class="info-line">
+                        Nível de <span class="label">resiliência</span> que você selecionou:
+                        <span class="valor" id="valorResiliencia">[]</span>
+                    </p>
+
+                    <p class="info-line">
+                        Nível de <span class="label">inteligência</span> que você selecionou:
+                        <span class="valor" id="valorInteligencia">[]</span>
+                    </p>
+
+                    <p class="calculo-line" id="calculoX">
+                        Portanto, resiliência + inteligência = X (resultado da soma)
+                    </p>
+                </div>
+
+                <!-- CARD PASSO 2 -->
+                <div class="card-resultado">
+                    <h3>Passo 2 - Seu objetivo</h3>
+
+                    <p class="info-line">
+                        <span class="label">Curso</span> (c) que você selecionou:
+                        <span class="valor" id="valorCurso">[]</span>
+                    </p>
+
+                    <p class="info-line">
+                        <span class="label">Instituição</span> (I) que você selecionou:
+                        <span class="valor" id="valorInstituicao">[]</span>
+                    </p>
+
+                    <p class="calculo-line" id="calculoY">
+                        Portanto, curso + instituição = Y (resultado da soma)
+                    </p>
+                </div>
+
+                <!-- CARD FINAL -->
+                <div class="card-final">
+                    <h3>Ou seja...</h3>
+                    <p id="mensagemDistancia">
+                        Em uma escala numérica, você está a <b>[]</b> casas de distância do curso de <b>[]</b>
+                        na <b>[]</b>. Isso significa que você <b>[está/não está]</b> longe do seu objetivo!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <footer>
+        <hr>
+        <p class="final">
+            Todos os direitos reservados.<br>
+            São Paulo, 2025.
+        </p>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

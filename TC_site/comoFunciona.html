@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
-    <title>Como funciona?</title>
+    <title>Como funciona? - Tudo x Nada</title>
     <link rel="shortcut icon" type="imagex/png" href="assets/logo.ico">
 
     <!--LINKS DAS FONTES-->
@@ -21,7 +21,6 @@
     <!--LINK CSS-->
     <link rel="stylesheet" type="text/css" href="css/global.css">
     <link rel="stylesheet" type="text/css" href="css/cf.css">
-    <link>
 </head>
 
 <body>
@@ -30,7 +29,7 @@
         <nav class="topo">
             <a href="index.html">
                 <div class="container_logo">
-                    <img class="logo_image" src="assets/logo.png"></img>
+                    <img class="logo_image" src="assets/logo.png" alt="Logo">
                     <h1 class="logo_nameA">TUDO</h1>
                     <h1 class="logo_nameB">x</h1>
                     <h1 class="logo_nameC">NADA</h1>
@@ -38,21 +37,34 @@
             </a>
 
             <div class="container_menu">
-                <button class="menu_hamburguer">
-                    <ul class="menu_itens">
-                        <li>Como funciona?</li>
-                        <li>Calcular minha chance</li>
-                        <li>Sobre nós</li>
-                    </ul>
-                    <img class="menuImg" src="assets/menu.png"></img>
+                <button class="menu_hamburguer" aria-label="Menu">
+                    <img class="menuImg" src="assets/menu.png" alt="Menu">
                 </button>
             </div>
         </nav>
 
+        <!-- MENU LATERAL -->
+        <div class="menu_lateral">
+            <ul class="menu_itens">
+                <li><a href="comoFunciona.html">COMO FUNCIONA?</a></li>
+                <li><a href="sobreNos.html">SOBRE NÓS</a></li>
+            </ul>
+        </div>
+
+        <!-- OVERLAY PARA FECHAR O MENU -->
+        <div class="menu_overlay"></div>
+
         <h2 class="title">Como o TC funciona?</h2>
 
         <div class="card_container">
-            <div class="cardP">
+            <div class="card">
+                <h2 class="card_title">O que é Y?</h2> <br>
+                <p style="text-align: left;">
+                    Já o Y representa qual a posição do <b>curso na instituição</b> que você deseja entrar. <br>
+                    Ele é calculado pela soma do número do curso e da <b>instituição</b> escolhidos
+                </p>
+            </div>
+            <div class="card">
                 <h2 class="card_title">O que é Y?</h2> <br>
                 <p style="text-align: left;">
                     Já o Y representa qual a posição do <b>curso na instituição</b> que você deseja entrar. <br>
@@ -86,8 +98,6 @@
             <a class="btn" href="passo1.html"><button class="btn_iniciar"> Calcular minha chance </button></a>
         </div>
 
-        
-
         <footer>
             <hr>
             <p class="final">
@@ -97,6 +107,9 @@
         </footer>
 
     </div>
+
+    <!-- SCRIPT JAVASCRIPT - ISSO É ESSENCIAL! -->
+    <script src="js/index.js"></script>
 </body>
 
 </html>
